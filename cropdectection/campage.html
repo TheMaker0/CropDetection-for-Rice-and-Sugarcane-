@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camera UI</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: black;
+}
+
+/* CAMERA CONTAINER */
+.camera {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+/* FAKE CAMERA PREVIEW */
+.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: linear-gradient(to bottom, #111, #333);
+}
+
+/* TOP BAR */
+.top-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 18px;
+}
+
+/* BOTTOM CONTROLS */
+.controls {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CAPTURE BUTTON */
+.capture-btn {
+  width: 80px;
+  height: 80px;
+  border: 5px solid white;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.capture-btn::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* CLICK EFFECT */
+.capture-btn:active {
+  transform: scale(0.9);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .capture-btn {
+    width: 65px;
+    height: 65px;
+  }
+
+  .capture-btn::after {
+    width: 45px;
+    height: 45px;
+  }
+
+  .top-bar {
+    font-size: 14px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="camera">
+
+  <!-- Fake Camera Preview -->
+  <div class="preview"></div>
+
+  <!-- Top UI -->
+  <div class="top-bar">
+    <span>⚡</span>
+    <span>HDR</span>
+  </div>
+
+  <!-- Bottom Controls -->
+  <div class="controls">
+  <a href="./result .html">
+    <div class="capture-btn"></div>
+  </a>
+</div>
+</div>
+
+</body>
+</html>

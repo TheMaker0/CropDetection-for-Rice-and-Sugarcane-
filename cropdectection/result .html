@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disease Result</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  width: 100%;
+  max-width: 650px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.header h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.badge {
+  background: #ff7a00;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* SECTION TITLE */
+.section-title {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* TYPE */
+.type {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.info {
+  color: #007bff;
+  margin-left: 5px;
+}
+
+/* BOX STYLE */
+.box {
+  background: #f3eadb;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* LIST WITH ICON */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .header h2 {
+    font-size: 16px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
+
+
+/* BUTTON CONTAINER */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+/* BASE BUTTON */
+.btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* CAPTURE AGAIN BUTTON */
+.btn.capture {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn.capture:hover {
+  background: #0056b3;
+}
+
+/* HOME BUTTON */
+.btn.home {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.btn.home:hover {
+  background: #ddd;
+}
+
+/* MOBILE STACK (optional) */
+@media (max-width: 500px) {
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+  <!-- IMAGE -->
+  <img src="https://images.unsplash.com/photo-1592928301721-67dbbfa9e7dc" alt="Rice">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h2>Disease Detected: Brownspot (Rice)</h2>
+    <div class="badge">Mild</div>
+  </div>
+
+  <!-- CONFIDENCE -->
+  <div class="section-title">Confidence Scores:</div>
+  <div class="box">Brownspot (Rice): 100.0%</div>
+
+  <!-- DISEASE INFO -->
+  <div class="section-title">Disease Information:</div>
+  <div class="type">
+    Type: Fungal Disease <span class="info">ℹ️</span>
+  </div>
+
+  <!-- SYMPTOMS -->
+  <div class="section-title">Symptoms:</div>
+  <div class="box">Small, reddish-brown circular or oval spots on leaves</div>
+  <div class="box">Spots may merge, leading to large, necrotic (dead) patches</div>
+  <div class="box">Premature leaf drying and reduced photosynthesis</div>
+
+  <!-- CAUSES -->
+  <div class="section-title">Possible Causes:</div>
+  <div class="box list-item">
+    <span>High humidity and prolonged leaf wetness</span>
+    <span class="info">ℹ️</span>
+  </div>
+  <div class="box list-item">
+    <span>Infection spreads through windborne spores and contaminated plant debris</span>
+    <span class="info">ℹ️</span>
+  </div>
+  <div class="box list-item">
+    <span>Poor field sanitation and overuse of nitrogen fertilizers</span>
+    <span class="info">ℹ️</span>
+  </div>
+
+  <!-- MANAGEMENT STRATEGIES -->
+  <div class="section-title">Management Strategies:</div>
+  <div class="box">Use disease-resistant rice varieties</div>
+  <div class="box">Apply appropriate fungicides when necessary</div>
+  <div class="box">Maintain proper field sanitation and remove infected debris</div>
+  <div class="box">Avoid excessive nitrogen fertilizer application</div>
+  <div class="box">Ensure proper spacing for good air circulation</div>
+
+  <div class="action-buttons">
+  <button class="btn capture">Capture Again</button>
+  <button class="btn home">Go to Homepage</button>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
